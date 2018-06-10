@@ -17,7 +17,8 @@ angular
         'ngResource',
         'ui.router',
         'ngSanitize',
-        'ngTouch'
+        'ngTouch',
+        'ngMaterial'
     ])
     .config(function($stateProvider, $urlRouterProvider) {
 
@@ -26,9 +27,9 @@ angular
         $stateProvider
             .state('home', {
                 url: "/",
-                templateUrl: 'views/main.html',
-                controller: 'MainCtrl',
-                controllerAs: 'main'
+                templateUrl: 'views/search.html',
+                controller: 'SearchCtrl',
+                controllerAs: 'search'
             })
             .state('about', {
                 url: "/about",
