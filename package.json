@@ -40,5 +40,6 @@
   },
   "scripts": {
     "test": "karma start test\\karma.conf.js"
-  }
+  },
+  "version": "0.0.1"
 }
