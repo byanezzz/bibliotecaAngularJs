@@ -1,1 +1,13 @@
 <p>This is the about view.</p>
+<div class="row">
+    <div class="col-md-3" ng-repeat='col in collection.collections'>
+        <div class="thumbnail">
+            <a href="/w3images/lights.jpg">
+                <img src="{{col.volumeInfo.imageLinks.smallThumbnail}}" alt="Lights" style="width:100%">
+                <div class="caption">
+                    <p>Lorem ipsum...</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

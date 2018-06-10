@@ -9,6 +9,7 @@
 
       function CollectionController(scope, CollectionService) {
           var vm = this;
+          vm.collections = [];
           vm.CollectionService = CollectionService;
           vm.activate();
 
@@ -19,7 +20,7 @@
 
       CollectionController.prototype.activate = function() {
           var vm = this;
-          vm.collection = vm.CollectionService.collections
+          vm.collections = vm.CollectionService.collections
       }
 
   })();
