@@ -42,7 +42,7 @@
 
                     <ul class="nav navbar-nav">
                         <li><a ui-sref="home">Home</a></li>
-                        <li><a ui-sref="about">About</a></li>
+                        <li><a ui-sref="collection">My Collection</a></li>
                     </ul>
                 </div>
             </div>
@@ -91,9 +91,12 @@
     <!-- endbuild -->
 
     <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
-    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/collection_controller.js"></script>
+    <script src="scripts/services/collection_service.js"></script>
+    <script src="scripts/factory/collection_factory.js"></script>
     <!-- endbuild -->
 </body>
 

@@ -30,10 +30,10 @@ angular
                 controller: 'MainCtrl',
                 controllerAs: 'main'
             })
-            .state('about', {
-                url: "/about",
-                templateUrl: 'views/about.html',
-                controller: 'AboutCtrl',
-                controllerAs: 'about'
+            .state('collection', {
+                url: "/collection",
+                templateUrl: 'views/collection.html',
+                controller: 'CollectionController',
+                controllerAs: 'collection'
             });
     });
