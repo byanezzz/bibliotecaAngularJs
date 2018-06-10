@@ -31,10 +31,10 @@ angular
                 controller: 'SearchCtrl',
                 controllerAs: 'search'
             })
-            .state('about', {
-                url: "/about",
-                templateUrl: 'views/about.html',
-                controller: 'AboutCtrl',
-                controllerAs: 'about'
+            .state('collection', {
+                url: "/collection",
+                templateUrl: 'views/collection.html',
+                controller: 'CollectionController',
+                controllerAs: 'collection'
             });
     });
