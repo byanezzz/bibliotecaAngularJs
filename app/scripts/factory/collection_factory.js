@@ -5,16 +5,19 @@
         .module('bibliotecaJsApp')
         .factory('CollectionFactory', CollectionFactory);
 
-    CollectionFactory.$inject = ['$q'];
+    CollectionFactory.$inject = ['$http'];
 
-    function CollectionFactory($q) {
+    function CollectionFactory($http) {
         var service = {
-            exposedFn: exposedFn
+            getBook: getBook
         };
 
         return service;
 
         ////////////////
-        function exposedFn() {}
+        function getBook(parm) {
+            return $http.get('https://www.googleapis.com/books/v1/volumes?q=' + parm);
+
+        }
     }
 })();

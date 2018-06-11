@@ -1,13 +1,14 @@
-<p>This is the about view.</p>
-<div class="row">
-    <div class="col-md-3" ng-repeat='col in collection.collections'>
-        <div class="thumbnail">
-            <a href="/w3images/lights.jpg">
-                <img src="{{col.volumeInfo.imageLinks.smallThumbnail}}" alt="Lights" style="width:100%">
-                <div class="caption">
-                    <p>Lorem ipsum...</p>
-                </div>
-            </a>
-        </div>
+<md-content class="md-padding">
+    <div layout="column" layout-gt-xs="row" layout-align="center">
+        <md-card flex flex-gt-xs="30" ng-repeat='col in collection.collections'>
+            <img src="{{col.volumeInfo.imageLinks.thumbnail}}" class="md-card-image" alt="image caption">
+            <md-card-content>
+                <h2>Card headline</h2>
+                <p>Card content</p>
+            </md-card-content>
+            <md-card-footer>
+                Card footer
+            </md-card-footer>
+        </md-card>
     </div>
-</div>
+</md-content>
