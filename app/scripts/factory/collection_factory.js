@@ -5,9 +5,9 @@
         .module('bibliotecaJsApp')
         .factory('CollectionFactory', CollectionFactory);
 
-    CollectionFactory.$inject = ['$http'];
+    CollectionFactory.$inject = ['$http', 'END_POINT'];
 
-    function CollectionFactory($http) {
+    function CollectionFactory($http, END_POINT) {
         var service = {
             getBook: getBook
         };
@@ -16,7 +16,7 @@
 
         ////////////////
         function getBook(parm) {
-            return $http.get('https://www.googleapis.com/books/v1/volumes?q=' + parm);
+            return $http.get(END_POINT.getBook + parm);
 
         }
     }
