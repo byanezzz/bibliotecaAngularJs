@@ -5,16 +5,19 @@
         .module('bibliotecaJsApp')
         .factory('CollectionFactory', CollectionFactory);
 
-    CollectionFactory.$inject = ['$q'];
+    CollectionFactory.$inject = ['$http', 'END_POINT'];
 
-    function CollectionFactory($q) {
+    function CollectionFactory($http, END_POINT) {
         var service = {
-            exposedFn: exposedFn
+            getBook: getBook
         };
 
         return service;
 
         ////////////////
-        function exposedFn() {}
+        function getBook(parm) {
+            return $http.get(END_POINT.getBook + parm);
+
+        }
     }
 })();
