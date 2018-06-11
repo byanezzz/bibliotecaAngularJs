@@ -5,13 +5,14 @@
         .module('bibliotecaJsApp')
         .service('CollectionService', CollectionService);
 
-    CollectionService.$inject = ['CollectionFactory'];
+    CollectionService.$inject = ['CollectionFactory', '$q'];
 
-    function CollectionService(CollectionFactory) {
+    function CollectionService(CollectionFactory, $q) {
         var service = this;
         ////////////////
         service.CollectionFactory = CollectionFactory;
-        service.collections = []
+        service.$q = $q;
+        service.collections = [];
 
     }
 
@@ -26,7 +27,21 @@
             return value.id === index;
         });
     };
+    CollectionService.prototype.getBooks = function(parm) {
+        var service = this;
+        var deferred = service.$q.defer();
 
+        service.CollectionFactory.getBook(parm).then(
+            function(data) {
+                deferred.resolve(data);
+            },
+            function(err) {
+                deferred.reject(err);
+            }
+        )
+
+        return deferred.promise;
+    }
 
 
 })();
