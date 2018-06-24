@@ -85,6 +85,21 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAFQeY_nOOVxOrn5gqCH6ZfGSlZFlWwhcs",
+            authDomain: "alpine-myth-132723.firebaseapp.com",
+            databaseURL: "https://alpine-myth-132723.firebaseio.com",
+            projectId: "alpine-myth-132723",
+            storageBucket: "alpine-myth-132723.appspot.com",
+            messagingSenderId: "407589511009"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="bower_components/angularfire/dist/angularfire.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -98,6 +113,7 @@
     <script src="scripts/factory/search_factory.js"></script>
     <script src="scripts/constant/constant.js"></script>
     <script src="scripts/services/search_service.js"></script>
+    <script src="scripts/services/firebasefactory.js"></script>
     <!-- endbuild -->
 
 </body>

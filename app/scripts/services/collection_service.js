@@ -5,12 +5,13 @@
         .module('bibliotecaJsApp')
         .service('CollectionService', CollectionService);
 
-    CollectionService.$inject = ['CollectionFactory', '$q'];
+    CollectionService.$inject = ['CollectionFactory', 'firebaseFactory', '$q'];
 
-    function CollectionService(CollectionFactory, $q) {
+    function CollectionService(CollectionFactory, firebaseFactory, $q) {
         var service = this;
         ////////////////
         service.CollectionFactory = CollectionFactory;
+        service.firebaseFactory = firebaseFactory;
         service.$q = $q;
         service.collections = [];
 
@@ -42,6 +43,17 @@
 
         return defered.promise;
     }
+    CollectionService.prototype.getFirebase = function() {
+        var service = this;
+
+        return service.firebaseFactory.firebaseFn();
+    };
+
+    CollectionService.prototype.getFirebaseObjSave = function(param) {
+        var service = this;
+
+        return service.firebaseFactory.firebaseObj(param);
+    };
 
 
 })();
