@@ -49,10 +49,10 @@
         return service.firebaseFactory.firebaseFn();
     };
 
-    CollectionService.prototype.getFirebaseObjSave = function(param) {
+    CollectionService.prototype.getFirebaseObjSave = function(params) {
         var service = this;
 
-        return service.firebaseFactory.firebaseObj(param);
+        return service.firebaseFactory.firebaseObj(params);
     };
 
 

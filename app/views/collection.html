@@ -1,18 +1,3 @@
-<!--<md-content class="md-padding">
-    <div layout="column" layout-gt-xs="row" layout-align="center">
-        <md-card flex flex-gt-xs="30" ng-repeat='col in collection.collections'>
-            <img src="{{col.volumeInfo.imageLinks.thumbnail}}" class="md-card-image" alt="image caption">
-            <md-card-content>
-                <h2>Card headline</h2>
-                <p>Card content</p>
-            </md-card-content>
-            <md-card-footer>
-                Card footer
-            </md-card-footer>
-        </md-card>
-    </div>
-</md-content>-->
-
 <div class="panel panel-default">
     <div class="panel-body">
         <div class="row">
@@ -23,7 +8,8 @@
                         <h3>Thumbnail label</h3>
                         <p>...</p>
                         <p><button class="btn btn-primary" role="button" ng-click="collection.addMessage()">Detalle</button>
-                            <button class="btn btn-primary" role="button" ng-click="collection.addCollections()">Eliminar</button>
+                            <button class="btn btn-primary" role="button" ng-click="collection.deleteCollections(col)">Eliminar</button>
+                            <button class="btn btn-primary" role="button" ng-click="collection.recharge()">recarga</button>
                         </p>
                     </div>
                 </div>
