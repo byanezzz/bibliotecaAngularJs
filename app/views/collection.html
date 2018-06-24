@@ -1,4 +1,4 @@
-<md-content class="md-padding">
+<!--<md-content class="md-padding">
     <div layout="column" layout-gt-xs="row" layout-align="center">
         <md-card flex flex-gt-xs="30" ng-repeat='col in collection.collections'>
             <img src="{{col.volumeInfo.imageLinks.thumbnail}}" class="md-card-image" alt="image caption">
@@ -11,4 +11,23 @@
             </md-card-footer>
         </md-card>
     </div>
-</md-content>
+</md-content>-->
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-sm-6 col-md-2" ng-repeat='col in collection.collections'>
+                <div class="thumbnail">
+                    <img src="{{col.volumeInfo.imageLinks.thumbnail}}">
+                    <div class="caption">
+                        <h3>Thumbnail label</h3>
+                        <p>...</p>
+                        <p><button class="btn btn-primary" role="button" ng-click="collection.addMessage()">Detalle</button>
+                            <button class="btn btn-primary" role="button" ng-click="collection.addCollections()">Eliminar</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
