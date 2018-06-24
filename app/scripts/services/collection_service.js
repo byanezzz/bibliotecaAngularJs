@@ -29,18 +29,18 @@
     };
     CollectionService.prototype.getBooks = function(parm) {
         var service = this;
-        var deferred = service.$q.defer();
+        var defered = service.$q.defer();
 
         service.CollectionFactory.getBook(parm).then(
             function(data) {
-                deferred.resolve(data);
+                defered.resolve(data);
             },
             function(err) {
-                deferred.reject(err);
+                defered.reject(err);
             }
         )
 
-        return deferred.promise;
+        return defered.promise;
     }
 
 
